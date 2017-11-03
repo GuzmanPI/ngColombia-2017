@@ -1,5 +1,10 @@
-# NG-COLOMBIA 2017
-## Advanced Directives & Components
+## Advanced Directives & Components - NG COLOMBIA 2017
+
+Component with 3 selects, country, state, and city.
+
+## RESTful API
+
+The API used to get the data is Battuta! `https://battuta.medunes.net/`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
