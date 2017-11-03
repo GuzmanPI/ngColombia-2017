@@ -18,7 +18,7 @@ export class AppComponent {
   selectState(state: State): void {
     this.state = state;
   }
-  
+
   selectCity(city: City): void {
     this.city = city;
   }
