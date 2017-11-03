@@ -1,0 +1,22 @@
+<div class="main-container">
+  <span>País: </span>
+  <select id="countries"  type="text"
+          [(ngModel)]="selectedCountry" (ngModelChange)="selectCountry()">
+    <option *appGeoData="{type: 'country'}; let dbCountry"
+            [ngValue]="dbCountry">{{dbCountry.name}}</option>
+  </select>
+
+  <span *ngIf="selectedCountry">Estad: </span>
+  <select id="states"  type="text" *ngIf="selectedCountry"
+          [(ngModel)]="selectedState" (ngModelChange)="selectState()">
+    <option *appGeoData="{countryIsoCode: selectedCountry.code, type: 'state'}; let dbState"
+            [ngValue]="dbState">{{dbState.region}}</option>
+  </select>
+
+  <span *ngIf="selectedState">Ciudad: </span>
+  <select id="cities"  type="text" *ngIf="selectedState"
+          [(ngModel)]="selectedCity" (ngModelChange)="selectCity()">
+    <option *appGeoData="{countryIsoCode: selectedCountry.code, stateName: selectedState.region, type: 'city'}; let dbCity"
+            [ngValue]="dbCity">{{dbCity.city}}</option>
+  </select>
+</div>

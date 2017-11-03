@@ -1,0 +1,17 @@
+.geo-entity {
+    color: white;
+    position: absolute;
+    left: 30vw;
+}
+
+.country {
+    top: calc(20vh + 70px);
+}
+
+.state {
+    top: calc(20vh + 95px);
+}
+
+.city {
+    top: calc(20vh + 120px);
+}
